@@ -1,0 +1,20 @@
+Codebrahma Test App
+=============================
+
+Synopsis
+--------
+
+**Codebrahma Test App** is an app for employee Signup.
+
+---------
+
+Feature List
+------------
+
+#### Email Send with token
+
+Here I have used action mailer for generating token and sending to the inboxes of users while users sign_in with a link. After clicking on that link users state will be activated.
+
+#### Phone number verification
+
+Here pin number should send to the phone of users and after verification of phone users can login. you can check in database 4digits pin number is going into database.

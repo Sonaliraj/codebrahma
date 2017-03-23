@@ -1,0 +1,10 @@
+<<h1>Sample App</h1>
+
+<p>Hi <%= @employer.name %>,</p>
+
+<p>
+Welcome to the Sample App! Click on the link below to activate your account:
+</p>
+
+<%= edit_account_activation_url(@employer, @employer.activation_token,email: @employer.email) %>
+

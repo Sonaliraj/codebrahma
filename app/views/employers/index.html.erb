@@ -1,0 +1,49 @@
+<li>
+  <%= link_to "Add Employee", new_employer_path %>
+</li>
+<div class="table-responsive">
+  <table class="table table-compact table-striped table-hover table-fixed">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>BirthDate</th>
+      <th>Gender</th>
+      <th>Location</th>
+      <th>Phone</th>
+      <th>Action</th>
+    </tr>
+    <% @employers.each do |employer| %>
+      <tr>
+        <td style="position: relative;">
+          <%= employer.name %>
+        </td>
+        <td>
+          <%= employer.email %>
+        </td>
+        <td>
+          <%= employer.dateofbirth %>
+        </td>
+        <td>
+	        <% if employer.gender? %>
+	          <h5>Male</h5>
+	        <% else  %>
+	          <h5>Female</h5>
+	        <% end %>
+	      </td>
+
+        <td>
+          <%= employer.location %>
+        </td>
+        <td>
+          <%= employer.phone %>
+        </td>
+
+        <td>
+          <%= link_to "Update", edit_employer_path(employer), :class => "btn btn-default" %>                          
+        </td>
+          
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
